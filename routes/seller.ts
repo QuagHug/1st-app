@@ -7,15 +7,15 @@ seller.get('/', (req, res) => {
     res.send('seller Server sending…');
 })
 
-seller.get('/product/dashboard', (req, res) => {
+seller.get('/dashboard', (req, res) => {
     res.send('Showing dashboard');
 })
 
-seller.post('/product/login', (req, res) => {
+seller.post('/login', (req, res) => {
     res.send('Showing login page');
 })
 
-seller.post('/product/register', (req, res) => {
+seller.post('/register', (req, res) => {
     res.send('Showing register page');
 })
 

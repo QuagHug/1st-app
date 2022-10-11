@@ -8,18 +8,18 @@ user.get('/', (req, res) => {
 })
 
 user.get('/profile', (req, res) => {
-    res.send('Showing server profile');
+    res.send('Showing user profile');
 })
 
 user.get('/product/:id', (req, res) => {
     res.send('Showing product by id');
 })
 
-user.post('/product/login', (req, res) => {
+user.post('/login', (req, res) => {
     res.send('Showing login page');
 })
 
-user.post('/product/register', (req, res) => {
+user.post('/register', (req, res) => {
     res.send('Showing register page');
 })
 

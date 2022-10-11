@@ -7,15 +7,15 @@ admin.get('/', (req, res) => {
     res.send('admin Server sending…');
 })
 
-admin.get('/product/dashboard', (req, res) => {
+admin.get('/dashboard', (req, res) => {
     res.send('Showing dashboard');
 })
 
-admin.post('/product/login', (req, res) => {
+admin.post('/login', (req, res) => {
     res.send('Showing login page');
 })
 
-admin.post('/product/register', (req, res) => {
+admin.post('/register', (req, res) => {
     res.send('Showing register page');
 })
 
