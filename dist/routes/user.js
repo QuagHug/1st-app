@@ -11,13 +11,17 @@ user.get('/', (req, res) => {
     res.send('User Server sending…');
 });
 user.get('/profile', (req, res) => {
-    res.send('Showing server profile');
+    res.send('Showing user profile');
 });
 user.get('/product/:id', (req, res) => {
     res.send('Showing product by id');
+    res.send(req.params);
 });
 user.post('/login', (req, res) => {
     res.send('Showing login page');
+});
+user.get('/login/passwordchange', (req, res) => {
+    res.send('Showing password changing page');
 });
 user.post('/register', (req, res) => {
     res.send('Showing register page');
