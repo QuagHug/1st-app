@@ -12,8 +12,7 @@ user.get('/profile/:id', (req, res) => {
 })
 
 user.get('/product/:id', (req, res) => {
-    res.send('Showing product by id');
-    res.send(req.params);
+    res.send('Showing product by id ' + req.params.id);
 })
 
 user.get('/product', (req, res) => {

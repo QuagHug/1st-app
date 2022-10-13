@@ -19,4 +19,13 @@ seller.post('/login', (req, res) => {
 seller.post('/register', (req, res) => {
     res.send('Showing register page');
 });
+seller.put('/product', (req, res) => {
+    res.send('Edit product');
+});
+seller.post('/product', (req, res) => {
+    res.send('New product');
+});
+seller.delete('/product', (req, res) => {
+    res.send('Delete product');
+});
 exports.default = seller;

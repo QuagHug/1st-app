@@ -10,20 +10,28 @@ const user = express_1.default.Router();
 user.get('/', (req, res) => {
     res.send('User Server sending…');
 });
-user.get('/profile', (req, res) => {
+user.get('/profile/:id', (req, res) => {
     res.send('Showing user profile');
 });
 user.get('/product/:id', (req, res) => {
-    res.send('Showing product by id');
-    res.send(req.params);
+    res.send('Showing product by id' + req.params.id);
+});
+user.get('/product', (req, res) => {
+    res.send('Showing list of product');
 });
 user.post('/login', (req, res) => {
     res.send('Showing login page');
 });
-user.get('/login/passwordchange', (req, res) => {
+user.post('/login/passwordchange', (req, res) => {
     res.send('Showing password changing page');
 });
 user.post('/register', (req, res) => {
     res.send('Showing register page');
+});
+user.post('/cart/:id', (req, res) => {
+    res.send('Showing user cart');
+});
+user.post('/checkout/:id', (req, res) => {
+    res.send('Showing user checkout');
 });
 exports.default = user;
