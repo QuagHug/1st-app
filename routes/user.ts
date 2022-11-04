@@ -1,4 +1,7 @@
 import express from 'express';
+import User from '../model/user';
+import { ObjectId } from 'mongodb'
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 const user = express.Router();
@@ -7,8 +10,14 @@ user.get('/', (req, res) => {
     res.send('User Server sending…');
 })
 
-user.get('/profile/:id', (req, res) => {
-    res.send('Showing user profile');
+user.get('/profile/:id', async (req, res) => {
+    let user_ = await User.findOne({_id : new ObjectId(req.params.id)});
+    if(user_) {
+        res.send(user_.firstName );
+    }
+    else {
+        res.status(404).send('user not found');
+    }
 })
 
 user.get('/product/:id', (req, res) => {

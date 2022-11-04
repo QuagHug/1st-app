@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const admin = express.Router();
 
-admin.get('/', (req, res) => {
+admin.get('/', (req, res) => {  
     res.send('admin Server sending…');
 })
 
